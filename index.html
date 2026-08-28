@@ -1,100 +1,157 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oscar Dominguez Alonso</title>
-
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-      }
-
-      .bgimg {
-        background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        color: white;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 25px;
-      }
-
-      .topleft {
-        position: absolute;
-        top: 0;
-        left: 16px;
-      }
-
-      .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
-      }
-
-      .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      hr {
-        margin: auto;
-        width: 40%;
-      }
-    </style>
+    <title>Oscar Domínguez Alonso — Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio de Oscar Domínguez Alonso, desarrollador de software especializado en Java, Kotlin y Spring."
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div class="bgimg">
-      <div class="topleft">
-        <p>Oscar Dominguez Alonso</p>
+    <nav class="navbar">
+      <span class="brand">Oscar Domínguez</span>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema" type="button">🌙</button>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Oscar Domínguez Alonso</h1>
+        <p>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma · Estudiante de Ingeniería de Computadores</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contact">Contactar</a>
+        </div>
       </div>
-      <div class="middle">
-        <h1>COMING SOON</h1>
-        <hr />
-        <p id="demo" style="font-size: 30px"></p>
+      <span class="scroll-hint">↓ scroll</span>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Sobre mí</span>
+          <h2>Quién soy</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y actualmente
+            estudio Ingeniería de Computadores. Construyo aplicaciones principalmente con
+            Java y Kotlin sobre el stack de Spring, y me gusta explorar otras tecnologías por
+            curiosidad: desde Go y C# hasta extensiones de navegador. Siempre aprendiendo
+            cosas nuevas.
+          </p>
+        </div>
       </div>
-      <div class="bottomleft">
-        <p>Software Developer</p>
+    </section>
+
+    <section id="skills" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Skills</span>
+          <h2>Con lo que trabajo</h2>
+        </div>
+        <div class="skills-grid">
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Kotlin</span>
+          <span class="skill-pill">Spring</span>
+          <span class="skill-pill">Hibernate</span>
+          <span class="skill-pill">SQL / PL-SQL</span>
+          <span class="skill-pill">Go</span>
+          <span class="skill-pill">C#</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Unity</span>
+          <span class="skill-pill">Android Studio</span>
+          <span class="skill-pill">IntelliJ IDEA</span>
+          <span class="skill-pill">MySQL Workbench</span>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <script>
-      // Set the date we're counting down to
-      var countDownDate = new Date("Jan 5, 2027 15:37:25").getTime();
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Proyectos</span>
+          <h2>Trabajo destacado</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>waybar-tui</h3>
+            <p>TUI en terminal para gestionar temas de Waybar.</p>
+            <div class="project-meta">
+              <span class="project-lang"><span class="lang-dot"></span>Go</span>
+              <a href="https://github.com/oscardaaz/waybar-tui" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-      // Update the count down every 1 second
-      var countdownfunction = setInterval(function () {
-        // Get todays date and time
-        var now = new Date().getTime();
+          <article class="project-card">
+            <h3>proyect-unity-2dam</h3>
+            <p>Juego de plataformas 2D desarrollado con Unity.</p>
+            <div class="project-meta">
+              <span class="project-lang"><span class="lang-dot"></span>C#</span>
+              <a href="https://github.com/oscardaaz/proyect-unity-2dam" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
+          <article class="project-card">
+            <h3>video-hud-extension</h3>
+            <p>Extensión de Chrome que muestra resolución real de vídeo, FPS y frames perdidos.</p>
+            <div class="project-meta">
+              <span class="project-lang"><span class="lang-dot"></span>JavaScript</span>
+              <a href="https://github.com/oscardaaz/video-hud-extension" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (10000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          <article class="project-card">
+            <h3>spring-quickstart</h3>
+            <p>Primera aplicación construida con Spring Boot.</p>
+            <div class="project-meta">
+              <span class="project-lang"><span class="lang-dot"></span>Java</span>
+              <a href="https://github.com/oscardaaz/spring-quickstart" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+          <article class="project-card">
+            <h3>Android-Studio</h3>
+            <p>Prácticas de Android: interfaces, navegación y componentes.</p>
+            <div class="project-meta">
+              <span class="project-lang"><span class="lang-dot"></span>Kotlin</span>
+              <a href="https://github.com/oscardaaz/Android-Studio" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(countdownfunction);
-          document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-    </script>
+    <section id="contact" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Contacto</span>
+          <h2>Hablemos</h2>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="https://github.com/oscardaaz" target="_blank" rel="noopener">GitHub</a>
+          <a class="contact-link" href="https://linkedin.com/in/oscardominguezalonso/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="contact-link" href="mailto:iamoscaar@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Oscar Domínguez Alonso</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
